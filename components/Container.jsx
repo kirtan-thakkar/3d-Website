@@ -1,7 +1,4 @@
 const Container = ({ children, className }) => {
-  return (
-    <div className={`w-full max-w-6xl mx-auto px-4 ${className || ""}`}>
-      {children}
-    </div>
-  );
-};
+  return <div className={`${className} bg-white dark:bg-black max-w-6xl mx-auto relative  `}>{children}</div>;
+}; 
+export default Container;
