@@ -33,7 +33,7 @@ const Navbar = () => {
     if (latest > 100) {
       setScroled(true);
     } else {
-      setScroled(false);    
+      setScroled(false);
     }
   });
 
@@ -41,7 +41,7 @@ const Navbar = () => {
     <div>
       <Container>
         <motion.nav
-          className="fixed  inset-x-0 top-0 z-10 mx-auto flex max-w-6xl rounded-2xl items-center justify-between p-4 px-6 backdrop-blur-sm transition-shadow duration-100 ease-in-out"
+          className="fixed inset-x-0 top-0 z-10 mx-auto flex max-w-6xl items-center justify-between rounded-2xl p-4 px-6 backdrop-blur-sm transition-shadow duration-100 ease-in-out"
           animate={{
             boxShadow: scroled ? "var(--shadow-aceternity)" : "none",
             width: scroled ? "78%" : "100%",
