@@ -41,8 +41,6 @@
     --color-dark-100: #86868b;
     --color-dark-200: #2e2e30;
     --color-light-100: #adb5bd;
-    --shadow-aceternity: 0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02), 0px 0px 0px 1px rgba(25, 28, 33, 0.08);
-    --shadow-section-inset: 0px 1px 4px 0px var(--color-neutral-100) inset, 0px -1px 4px 0px var(--color-neutral-100) inset;
 }
 
 html {
@@ -176,7 +174,7 @@ body {
         }
 
         #canvas {
-            @apply !w-full !h-[80vh] lg: !h-dvh relative z-40;
+            @apply !w-full !h-[80vh] lg:!h-dvh relative z-40;
         }
     }
 
