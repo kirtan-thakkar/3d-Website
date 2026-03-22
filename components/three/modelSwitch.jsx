@@ -13,6 +13,8 @@ const ModelSwitch = ({scale, isMobile}) => {
         zoom:1,
         speed:1,
         polar: [-Math.PI , Math.PI],
+        azimuth: [-Infinity, Infinity], //slide as much as you want horizontally  
+        config: { mass: 1, tension: 0, friction: 26 }, // trys to replicate the feel of a physical object like real world 
     }
 
     return (
