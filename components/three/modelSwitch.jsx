@@ -3,6 +3,7 @@ import { useRef } from "react";
 import Macbook16Model from "../models/Macbook-16";
 import Macbook14Model from "../models/Macbook-14";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const ANIMATION_DURATION = 1; // Duration of the animation in seconds
 const OFFSET_DISTANCE = 5; // Distance to offset the models during the animation
@@ -17,11 +18,15 @@ const fadeMeshes = (group, opacity) => {
   });
 };
 
-const moveGroup = (group, x)=>{
-    if(!group) return;
+const moveGroup = (group, x) => {
+  if (!group) return;
 
-    gsap.to(group.position, {x , duration: ANIMATION_DURATION, ease: "power2.inOut"});
-}
+  gsap.to(group.position, {
+    x,
+    duration: ANIMATION_DURATION,
+    ease: "power2.inOut",
+  });
+};
 
 const ModelSwitch = ({ scale, isMobile }) => {
   const smallMacbookRef = useRef();
@@ -37,6 +42,23 @@ const ModelSwitch = ({ scale, isMobile }) => {
     azimuth: [-Infinity, Infinity], //slide as much as you want horizontally
     config: { mass: 1, tension: 0, friction: 26 }, // trys to replicate the feel of a physical object like real world
   };
+
+  useGSAP(() => {
+    if (showLargeMacbook) {
+        moveGroup(smallMacbookRef.current, -OFFSET_DISTANCE);
+        moveGroup(largeMacbookRef.current, 0);
+
+        fadeMeshes(smallMacbookRef.current, 0);
+        fadeMeshes(largeMacbookRef.current, 1);
+    }else{
+        moveGroup(smallMacbookRef.current, 0);
+      moveGroup(largeMacbookRef.current, OFFSET_DISTANCE);
+
+      fadeMeshes(smallMacbookRef.current, 1);
+      fadeMeshes(largeMacbookRef.current, 0);
+
+    }
+  }, [scale]); // runs when something that is sclae here in the dependency array changes
 
   return (
     <>
