@@ -51,14 +51,14 @@ const ModelSwitch = ({ scale, isMobile }) => {
         fadeMeshes(smallMacbookRef.current, 0);
         fadeMeshes(largeMacbookRef.current, 1);
     }else{
-        moveGroup(smallMacbookRef.current, 0);
+      moveGroup(smallMacbookRef.current, 0);
       moveGroup(largeMacbookRef.current, OFFSET_DISTANCE);
 
       fadeMeshes(smallMacbookRef.current, 1);
       fadeMeshes(largeMacbookRef.current, 0);
 
     }
-  }, [scale]); // runs when something that is sclae here in the dependency array changes
+  }, [scale]); // runs when something i.e. sclae here ; in the dependency array changes
 
   return (
     <>
@@ -67,12 +67,12 @@ const ModelSwitch = ({ scale, isMobile }) => {
           <Macbook16Model scale={isMobile ? 0.05 : 0.08} />
         </group>
       </PresentationControls>
-      {/* <PresentationControls {...controlsConfig}>
-        <group ref={largeMacbookRef}>
+      { <PresentationControls {...controlsConfig}>
+        <group ref={smallMacbookRef}>
             <Macbook14Model scale={isMobile ? 0.03 : 0.06}/>
 
         </group>
-       </PresentationControls> */}
+       </PresentationControls> }
     </>
   );
 };
