@@ -7,6 +7,7 @@ import Image from "next/image";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
 import Showcase from "@/components/Showcase";
+import PerformancePage from "@/components/Performance";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -17,7 +18,7 @@ export default function Home() {
       <Hero />
       <Product />
       <Showcase />
-      <Performance />
+      <PerformancePage   />
     </div>
   );
 }
