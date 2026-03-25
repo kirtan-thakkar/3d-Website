@@ -1,7 +1,7 @@
 import {create} from 'zustand';
 
 const useMacbookStore = create((set)=>({
-    color:"#2e2c2e",
+    color:"#2e2e2c",
     setColor : (color)=>set({color}),
 
     scale:0.08,
