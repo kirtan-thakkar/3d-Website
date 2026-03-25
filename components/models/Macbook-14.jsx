@@ -43,7 +43,7 @@ export default function Macbook14Model(props) {
         }
       }
     });
-  }, [color]); // runs when color changes
+  }, [color,scene]); // runs when color changes
   return (
     <group {...props} dispose={null}>
       <mesh

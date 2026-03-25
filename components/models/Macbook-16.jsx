@@ -46,7 +46,7 @@ export default function Macbook16Model(props) {
         }
       }
     });
-  }, [color]);
+  }, [color,scene]);
   return (
     <group {...props} dispose={null}>
       <mesh
