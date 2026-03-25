@@ -1,15 +1,5 @@
 "use client";
-import { Link } from "next-view-transitions";
 import Image from "next/image";
-import Container from "./Container";
-import {
-  LayoutGroup,
-  motion,
-  useMotionValueEvent,
-  useScroll,
-} from "motion/react";
-import { useState } from "react";
-
 const Navbar = () => {
   const navItem = [
     { label: "Store" },
