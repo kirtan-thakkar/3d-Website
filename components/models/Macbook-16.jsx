@@ -136,7 +136,6 @@ export default function Macbook16Model(props) {
       />
       <mesh
         geometry={nodes.Object_123.geometry}
-        material={materials.sfCQkHOWyrsLmor}
         rotation={[Math.PI / 2, 0, 0]}
       >
         <meshBasicMaterial map={texture} />
