@@ -8,6 +8,7 @@ import Showcase from "@/components/Showcase";
 import PerformancePage from "@/components/Performance";
 import Feature from "@/components/Features";
 import HighlightPage from "@/components/Highlight";
+import Footer from "@/components/Footer";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -21,6 +22,7 @@ export default function Home() {
       <PerformancePage   />
       <Feature />
       <HighlightPage />
+      <Footer />
     </div>
   );
 }
