@@ -14,7 +14,9 @@ import { useGLTF, useTexture } from "@react-three/drei";
 import useMacbookStore from "@/app/store";
 import * as THREE from "three";
 export default function Macbook14Model(props) {
-  const { nodes, materials , scene   } = useGLTF("/models/macbook-14-transformed.glb");
+  const { nodes, materials, scene } = useGLTF(
+    "/models/macbook-14-transformed.glb",
+  );
   const { color } = useMacbookStore();
   const texture = useTexture("/screen.png");
   const noChangePart = [
@@ -43,7 +45,7 @@ export default function Macbook14Model(props) {
         }
       }
     });
-  }, [color,scene]); // runs when color changes
+  }, [color, scene]); // runs when color changes
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -131,11 +133,7 @@ export default function Macbook14Model(props) {
         material={materials.JvMFZolVCdpPqjj}
         rotation={[Math.PI / 2, 0, 0]}
       />
-      <mesh
-        geometry={nodes.Object_123.geometry}
-  
-        rotation={[Math.PI / 2, 0, 0]}
-      >
+      <mesh geometry={nodes.Object_123.geometry} rotation={[Math.PI / 2, 0, 0]}>
         <meshBasicMaterial map={texture} />
       </mesh>
       <mesh
