@@ -1,9 +1,9 @@
 "use client";
-const Performance =()=>{
+const PerformancePage =()=>{
     return(
         <div>
             Performance section
         </div>
     )
 }
-export default Performance
+export default PerformancePage
