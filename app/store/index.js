@@ -1,3 +1,4 @@
+import { texture } from 'three/src/nodes/accessors/TextureNode';
 import {create} from 'zustand';
 
 const useMacbookStore = create((set)=>({
@@ -7,7 +8,10 @@ const useMacbookStore = create((set)=>({
     scale:0.08,
     setScale : (scale)=>set({scale}),
 
-    reset:()=>set({color:"#2e2e2c",scale:0.08})
+    texture :"/videos/feature-1.mp4",
+    setTexture : (texture)=>set({texture}),
+
+    reset:()=>set({color:"#2e2e2c",scale:0.08,texture:"/videos/feature-1.mp4"},)
 }))
 
 export default useMacbookStore;
