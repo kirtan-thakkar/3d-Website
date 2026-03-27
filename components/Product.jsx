@@ -1,8 +1,6 @@
 "use client";
 import useMacbookStore from "@/app/store";
-import { Box } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import clsx from "clsx";
 import Macbook14Model from "./models/Macbook-14";
 import StudioLights from "./three/StudioLights";
