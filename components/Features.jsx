@@ -79,7 +79,7 @@ const ModelScroll = () => {
         trigger: "#f-canvas",
         start: "top top",
         end: "bottom top",
-        scrub: 1,
+        scrub: 2,
         pin: true,
       },
     });
