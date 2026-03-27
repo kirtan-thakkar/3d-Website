@@ -1,4 +1,3 @@
-import { texture } from 'three/src/nodes/accessors/TextureNode';
 import {create} from 'zustand';
 
 const useMacbookStore = create((set)=>({
